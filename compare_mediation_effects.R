@@ -5,7 +5,7 @@
 # "Understanding interventional effects: a more natural approach to mediation   #
 #  analysis?"                                                                   #
 #                                                                               #
-#  Margarita Moreno-Betancur, 18 December 2017                                  #
+#  Margarita Moreno-Betancur, 12 January 2017                                   #
 #                                                                               #
 #################################################################################
 
@@ -63,7 +63,7 @@ pout<-cbind(pout,pr)
 # Calculate total causal effect
 TCE<-pr[2]-pr[1]
 
-# Calculate M-M interventional effects 
+# Calculate MM interventional effects 
 IDE<-pr[3]-pr[1]
 IIEL<-pr[5]-pr[4]
 IIEM<-pr[6]-pr[5]
@@ -74,7 +74,7 @@ de<-c(de,IDE+IIEL)
 ie<-c(ie,IIEM+REM)
 rem<-c(rem,REM)
 
-# Calculate S-B interventional effects
+# Calculate SB interventional effects
 IDE_S<-pr[5]-pr[7]
 IIE_S<-pr[6]-pr[5]
 te<-c(te,sum(IDE_S,IIE_S))
@@ -124,8 +124,8 @@ plot(seq(-3,3),ind[,1],type="b",lty=1,main="Indirect effect (via M)",ylim=yran,y
 lines(seq(-3,3),ind[,2],type="b",lty=5,pch=4,cex=.7)
 lines(seq(-3,3),ind[,3],type="b",lty=3,pch=2,cex=.7)
 
-legend("bottomright",legend=c("Interventional (estimand, M-M)",
-                              "Interventional (estimand, S-B)",
+legend("bottomright",legend=c("Interventional (estimand, MM)",
+                              "Interventional (estimand, SB)",
                               "Natural (estimate, ignoring L)"),
        lty=c(1,5,3),bty="n",cex=0.8,pch=c(20,4,2),pt.cex=c(1,.7,.7))
 
