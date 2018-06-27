@@ -5,7 +5,7 @@
 # "Understanding interventional effects: a more natural approach to mediation   #
 #  analysis?"                                                                   #
 #                                                                               #
-#  Margarita Moreno-Betancur, 12 January 2017                                   #
+#  Margarita Moreno-Betancur, 12 January 2018                                   #
 #                                                                               #
 #################################################################################
 
